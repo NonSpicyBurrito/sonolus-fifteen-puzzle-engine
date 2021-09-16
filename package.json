@@ -1,0 +1,30 @@
+{
+  "name": "sonolus-fifteen-puzzle-engine",
+  "version": "0.1.0",
+  "description": "A Fifteen Puzzle engine in Sonolus",
+  "author": "NonSpicyBurrito",
+  "repository": "github:NonSpicyBurrito/sonolus-fifteen-puzzle-engine",
+  "license": "MIT",
+  "keywords": [
+    "Sonolus"
+  ],
+  "scripts": {
+    "lint": "tsc -p . --noEmit && eslint --ext .ts src/",
+    "serve": "ts-node-dev --respawn --transpile-only ./src/serve",
+    "build": "ts-node ./src/build"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.12",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "fs-extra": "^10.0.0",
+    "prettier": "^2.4.1",
+    "sonolus.js": "^3.1.1",
+    "ts-node": "^10.2.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.3"
+  }
+}
