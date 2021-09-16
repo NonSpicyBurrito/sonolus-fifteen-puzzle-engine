@@ -32,7 +32,7 @@ import {
     TouchY,
     UnlerpClamped,
 } from 'sonolus.js'
-import { cell, temp } from './common'
+import { cell, engineId, temp } from './common'
 
 const cellSize = 0.375
 const stageSize = cellSize * 4
@@ -191,5 +191,5 @@ function rect(
 }
 
 function sprite(id: Code<number>) {
-    return customSkinSprite(999, id)
+    return customSkinSprite(engineId, id)
 }

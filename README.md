@@ -20,3 +20,9 @@ Engine ID: `999`
 | 0-14 | Number           |
 | 15   | Cell Background  |
 | 20   | Stage Background |
+
+### Effect Clips
+
+| ID  | Clip |
+| --- | ---- |
+| 1   | Win  |
