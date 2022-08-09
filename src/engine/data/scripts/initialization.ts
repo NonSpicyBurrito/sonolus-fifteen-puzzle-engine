@@ -12,14 +12,14 @@ import {
     PerfectMultiplier,
     RandomInteger,
     ScreenAspectRatio,
-    SScript,
+    Script,
     Subtract,
     UIMenu,
     UIMenuConfiguration,
 } from 'sonolus.js'
 import { cell, temp } from './common'
 
-export function initialization(): SScript {
+export function initialization(): Script {
     const preprocess = [
         UIMenu.set(
             Subtract(ScreenAspectRatio, 0.05),
@@ -61,12 +61,8 @@ export function initialization(): SScript {
     ]
 
     return {
-        preprocess: {
-            code: preprocess,
-        },
-        updateSequential: {
-            code: updateSequential,
-        },
+        preprocess,
+        updateSequential,
     }
 }
 

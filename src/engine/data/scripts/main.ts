@@ -1,3 +1,4 @@
+import { EffectClip } from 'sonolus-core'
 import {
     Abs,
     Add,
@@ -6,7 +7,6 @@ import {
     customSkinSprite,
     Divide,
     Draw,
-    EffectClip,
     EntityInfo,
     EntityMemory,
     Equal,
@@ -22,7 +22,7 @@ import {
     Play,
     Power,
     Round,
-    SScript,
+    Script,
     State,
     Subtract,
     Time,
@@ -57,7 +57,7 @@ const animation = {
     duration: 0.1,
 }
 
-export function main(): SScript {
+export function main(): Script {
     const shouldSpawn = Equal(EntityInfo.of(0).state, State.Despawned)
 
     const initialize = [
@@ -134,18 +134,10 @@ export function main(): SScript {
     ]
 
     return {
-        shouldSpawn: {
-            code: shouldSpawn,
-        },
-        initialize: {
-            code: initialize,
-        },
-        touch: {
-            code: touch,
-        },
-        updateParallel: {
-            code: updateParallel,
-        },
+        shouldSpawn,
+        initialize,
+        touch,
+        updateParallel,
     }
 }
 

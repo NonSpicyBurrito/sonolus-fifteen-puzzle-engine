@@ -1,6 +1,6 @@
-import { SUI } from 'sonolus.js'
+import { EngineConfigurationUI } from 'sonolus-core'
 
-export const ui: SUI = {
+export const ui: EngineConfigurationUI = {
     primaryMetric: 'arcade',
     secondaryMetric: 'life',
     menuVisibility: {
