@@ -1,0 +1,21 @@
+export const skin = defineSkin({
+    sprites: {
+        board: 'Fifteen Puzzle Board',
+        cell: 'Fifteen Puzzle Cell',
+        n1: 'Fifteen Puzzle 1',
+        n2: 'Fifteen Puzzle 2',
+        n3: 'Fifteen Puzzle 3',
+        n4: 'Fifteen Puzzle 4',
+        n5: 'Fifteen Puzzle 5',
+        n6: 'Fifteen Puzzle 6',
+        n7: 'Fifteen Puzzle 7',
+        n8: 'Fifteen Puzzle 8',
+        n9: 'Fifteen Puzzle 9',
+        n10: 'Fifteen Puzzle 10',
+        n11: 'Fifteen Puzzle 11',
+        n12: 'Fifteen Puzzle 12',
+        n13: 'Fifteen Puzzle 13',
+        n14: 'Fifteen Puzzle 14',
+        n15: 'Fifteen Puzzle 15',
+    },
+})
