@@ -1,6 +1,6 @@
 import { effect } from '../effect.js'
 import { skin } from '../skin.js'
-import { state } from './shared.js'
+import { state } from '../state.js'
 
 const completed = [
     skin.sprites.n1.id,

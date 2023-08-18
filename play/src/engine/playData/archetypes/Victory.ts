@@ -1,5 +1,5 @@
 import { effect } from '../effect.js'
-import { state } from './shared.js'
+import { state } from '../state.js'
 
 export class Victory extends Archetype {
     hasInput = true
