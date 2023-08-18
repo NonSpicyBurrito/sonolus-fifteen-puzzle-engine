@@ -5,9 +5,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "sonolus-cli --dev",
-    "prebuild": "tsc -p . --noEmit && eslint --ext .ts ./src",
-    "build": "sonolus-cli --build"
+    "dev:play": "sonolus-cli --dev ./play/sonolus-cli.config.js",
+    "prebuild": "tsc -p ./play --noEmit && eslint --ext .ts ./play",
+    "build": "sonolus-cli --build ./play/sonolus-cli.config.js"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.4.0",
