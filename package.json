@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev:play": "sonolus-cli --dev ./play/sonolus-cli.config.js",
-    "prebuild": "tsc -p ./play --noEmit && eslint --ext .ts ./play",
+    "prebuild": "tsc -p ./shared --noEmit && tsc -p ./play --noEmit && eslint --ext .ts ./shared && eslint --ext .ts ./play",
     "build": "sonolus-cli --build ./play/sonolus-cli.config.js"
   },
   "devDependencies": {
