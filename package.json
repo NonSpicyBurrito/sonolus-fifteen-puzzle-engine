@@ -1,6 +1,6 @@
 {
   "name": "sonolus-fifteen-puzzle-engine",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Fifteen Puzzle engine in Sonolus.",
   "private": true,
   "type": "module",
