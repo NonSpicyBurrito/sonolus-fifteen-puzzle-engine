@@ -1,15 +1,14 @@
 import { LevelData } from 'sonolus-core'
-import { archetypes } from '../../engine/playData/archetypes/index.js'
 
 export const data: LevelData = {
     bgmOffset: 0,
     entities: [
         {
-            archetype: archetypes.Game.name,
+            archetype: 'Game',
             data: [],
         },
         {
-            archetype: archetypes.Victory.name,
+            archetype: 'Victory',
             data: [],
         },
     ],
