@@ -38,6 +38,8 @@ export class Game extends Archetype {
     })
 
     preprocess() {
+        if (multiplayer.isMultiplayer) this.randomizeBoard()
+
         skin.transform.set(Mat.identity.scale(0.375, -0.375).translate(-0.75, 0.75))
 
         score.base.perfect = 1
@@ -54,21 +56,7 @@ export class Game extends Archetype {
     }
 
     initialize() {
-        for (const [i, id] of completed.entries()) {
-            this.board.set(i, id)
-        }
-
-        let parity = 0
-        for (let i = 14; i > 0; i--) {
-            const j = Math.randomInt(0, i + 1)
-
-            if (i !== j) {
-                this.swap(i, j)
-            } else {
-                parity++
-            }
-        }
-        if (parity % 2) this.swap(0, 1)
+        if (!multiplayer.isMultiplayer) this.randomizeBoard()
 
         this.empty.i = 15
         this.empty.x = 3
@@ -147,6 +135,24 @@ export class Game extends Archetype {
         }
 
         return true
+    }
+
+    randomizeBoard() {
+        for (const [i, id] of completed.entries()) {
+            this.board.set(i, id)
+        }
+
+        let parity = 0
+        for (let i = 14; i > 0; i--) {
+            const j = Math.randomInt(0, i + 1)
+
+            if (i !== j) {
+                this.swap(i, j)
+            } else {
+                parity++
+            }
+        }
+        if (parity % 2) this.swap(0, 1)
     }
 
     swap(i: number, j: number) {
