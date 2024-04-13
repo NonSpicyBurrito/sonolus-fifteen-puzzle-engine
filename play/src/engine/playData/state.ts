@@ -1,3 +1,9 @@
+export enum Status {
+    Ongoing,
+    Loss,
+    Won,
+}
+
 export const state = levelMemory({
-    done: Boolean,
+    status: DataType<Status>,
 })

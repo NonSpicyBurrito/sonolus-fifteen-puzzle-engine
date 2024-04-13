@@ -1,5 +1,5 @@
 import { effect } from '../effect.js'
-import { state } from '../state.js'
+import { Status, state } from '../state.js'
 
 export class Victory extends Archetype {
     hasInput = true
@@ -9,13 +9,18 @@ export class Victory extends Archetype {
     }
 
     shouldSpawn() {
-        return state.done
+        return state.status !== Status.Ongoing
     }
 
     initialize() {
-        this.result.judgment = Judgment.Perfect
-        this.despawn = true
+        if (state.status === Status.Won) {
+            this.result.judgment = Judgment.Perfect
 
-        effect.clips.victory.play(0)
+            effect.clips.victory.play(0)
+        } else {
+            this.result.judgment = Judgment.Miss
+        }
+
+        this.despawn = true
     }
 }
