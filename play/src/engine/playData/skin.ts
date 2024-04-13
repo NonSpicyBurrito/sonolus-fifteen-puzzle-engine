@@ -1,5 +1,6 @@
 export const skin = defineSkin({
     sprites: {
+        bar: 'Fifteen Puzzle Bar',
         board: 'Fifteen Puzzle Board',
         cell: 'Fifteen Puzzle Cell',
         n1: 'Fifteen Puzzle 1',
